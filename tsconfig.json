@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "esnext",
         "module": "none",
         "moduleResolution": "node",
         "experimentalDecorators": true,
@@ -11,11 +11,6 @@
         "suppressImplicitAnyIndexErrors": true,
         "outDir": "./lib/",
         "allowSyntheticDefaultImports": true, // required for three-gpu-particle-system
-    },
-    "awesomeTypescriptLoaderOptions": {
-        "useWebpackText": true,
-        "forkChecker": true,
-        "useCache": true
     },
     "exclude": [
         "node_modules",

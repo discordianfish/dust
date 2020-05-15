@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/src/index.html',
     filename: 'index.html',
-    inject: 'body'
+    inject: 'head'
 })
 
 /* Configure ProgressBar */
@@ -28,7 +28,8 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'awesome-typescript-loader',
+                use: 'ts-loader',
+                exclude: /[\/\\](node_modules|bower_components|public)[\/\\]/,
             }, {
                 test: /\.css$/,
                 exclude: /[\/\\](node_modules|bower_components|public)[\/\\]/,
